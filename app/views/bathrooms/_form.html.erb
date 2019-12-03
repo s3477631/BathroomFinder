@@ -1,0 +1,37 @@
+<%= form_with(model: bathroom, local: true) do |form| %>
+  <% if bathroom.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(bathroom.errors.count, "error") %> prohibited this bathroom from being saved:</h2>
+
+      <ul>
+      <% bathroom.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :X_Coordinate %>
+    <%= form.text_field :xcoord, :id => "x-coord" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Y_Coordinate %>
+    <%= form.text_field :ycoord, :id => "y-coord" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rating %>
+    <%= form.number_field :rating %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

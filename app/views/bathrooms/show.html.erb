@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Xcoord:</strong>
+  <%= @bathroom.xcoord %>
+</p>
+
+<p>
+  <strong>Ycoord:</strong>
+  <%= @bathroom.ycoord %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @bathroom.description %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @bathroom.rating %>
+</p>
+
+<%= link_to 'Edit', edit_bathroom_path(@bathroom) %> |
+<%= link_to 'Back', bathrooms_path %>

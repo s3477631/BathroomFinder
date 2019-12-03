@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<%= link_to 'New Bathroom', new_bathroom_path %>
+
+
+  <input id="x-coord"/>
+  <input id="y-coord"/>
+<h1>Bathrooms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Xcoord</th>
+      <th>Ycoord</th>
+      <th>Description</th>
+      <th>Rating</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bathrooms.each do |bathroom| %>
+      <tr>
+        <td><%= bathroom.xcoord %></td>
+        <td><%= bathroom.ycoord %></td>
+        <td><%= bathroom.description %></td>
+        <td><%= bathroom.rating %></td>
+        <td><%= link_to 'Show', bathroom %></td>
+        <td><%= link_to 'Edit', edit_bathroom_path(bathroom) %></td>
+        <td><%= link_to 'Destroy', bathroom, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+  <div style='width: 800px;'>  
+  <div id="map" style='width: 100vw; height: 100vh;'></div>  
+</div>  
+

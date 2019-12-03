@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  xcoord: 1.5
+  ycoord: 1.5
+  description: MyText
+  rating: 1
+
+two:
+  xcoord: 1.5
+  ycoord: 1.5
+  description: MyText
+  rating: 1
