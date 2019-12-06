@@ -67,6 +67,7 @@ class BathroomsController < ApplicationController
       @bathroom = Bathroom.find(params[:id])
     end
 
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def bathroom_params
       params.require(:bathroom).permit(:xcoord, :ycoord, :description, :rating)
