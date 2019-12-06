@@ -1,4 +1,5 @@
 class BathroomsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_bathroom, only: [:show, :edit, :update, :destroy]
 
   # GET /bathrooms

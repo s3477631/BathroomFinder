@@ -1,10 +1,12 @@
 <p id="notice"><%= notice %></p>
 <div style="height: 100vh;">
+
 <button type="button" style="width: 100vw;" class="btn btn-danger"><%= link_to 'Add Bathroom', new_bathroom_path, {:style=>"color:#fff;"} %></button>
 
 <div style="display: inline-flex;">
+
   <span>
-  Your current location is:
+       <%= current_user.email%>, your current location is:
   </span>
   <input id="x-coord"/>
   <input id="y-coord"/>
