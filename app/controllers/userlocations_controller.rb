@@ -25,7 +25,7 @@ class UserlocationsController < ApplicationController
   # POST /userlocations.json
   def create
     @userlocation = Userlocation.new(userlocation_params)
-
+    @userlocation.user = current_user
     respond_to do |format|
       if @userlocation.save
         format.html { redirect_to @userlocation, notice: 'Userlocation was successfully created.' }

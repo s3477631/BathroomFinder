@@ -17,7 +17,7 @@
       <tr>
         <td><%= userlocation.lat %></td>
         <td><%= userlocation.lng %></td>
-        <td><%= userlocation.user %></td>
+        <td><%= userlocation.user.email %></td>
         <td><%= link_to 'Show', userlocation %></td>
         <td><%= link_to 'Edit', edit_userlocation_path(userlocation) %></td>
         <td><%= link_to 'Destroy', userlocation, method: :delete, data: { confirm: 'Are you sure?' } %></td>

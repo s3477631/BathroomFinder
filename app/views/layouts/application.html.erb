@@ -51,7 +51,18 @@ function init(){
               lat: position.coords.latitude,
               lng: position.coords.longitude
             };
-        
+    
+        Rails.ajax({
+          url: "/userlocations",
+          type: "POST",
+          data: `lat=${position.coords.latitude}&lng=${position.coords.longitude}&user_id=1`,
+          success: function(data) {
+          console.log(data);
+          },
+          error: function(err){
+            console.log(err)
+          }
+        });
        let xpos =   document.getElementById("x-coord").value = position.coords.latitude
       let ypox =  document.getElementById("y-coord").value = position.coords.longitude
   let map = new google.maps.Map(document.getElementById('map'), {
