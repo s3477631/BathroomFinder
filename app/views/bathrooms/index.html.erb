@@ -2,8 +2,6 @@
 <div style="height: 100vh;">
 <button type="button" style="width: 100vw;" class="btn btn-danger"><%= link_to 'Add Bathroom', new_bathroom_path, {:style=>"color:#fff;"} %></button>
 
- <%= text_field :xcoord, :id => "x-coord" %>
-  <%= text_field :xcoord, :id => "y-coord" %>
 <div style="display: inline-flex;">
   <span>
   Your current location is:
@@ -13,6 +11,7 @@
   </div>
   <div style='width: 800px;'>  
   <div id="map" style='width: 100vw; height: 100vh;'></div>
+  
   </div>  
 </div>  
 
